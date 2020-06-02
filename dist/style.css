@@ -1,7 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+#container{
+  display:flex;
+  flex-direction:column;
+  height:700px;
+  animation:pulse 0.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    background-color: #003143;
+  }
+  30%{
+    background-color: #001d27;
+  }
+  100% {
+    background-color: #003143;
+  }
+}
+#sub-container{
+  margin:auto;
+}
 #drum-machine{
   background-color:#f1f1f1;
   display:flex;
   max-width:500px;
+  border-radius:10px;
   flex-direction: row;
   margin:auto;
   padding:20px;
@@ -10,8 +32,11 @@
   background-color:#5f5f5f;
   display:flex;
   flex-direction: column;
+  border-radius:10px;
+  margin:10px;
 }
 .drum-pad{
+  font-family:'Press Start 2P';
   margin:5px;
   padding:10px;
   width:70px;
@@ -22,9 +47,10 @@
 }
 .drum-pad:active{
   background-color:#f1f1f1;
+  background-image: radial-gradient(#1accd7,#358f94,#1f5976);
 }
 .drum-pad:hover{
-  transform: translate(2px, 2px);
+  transform: translate(2px, 1px);
 }
 #row{
   display:flex;
@@ -32,12 +58,17 @@
 }
 #display{
   background-color:#5f5f5f;
-  width:100px;
+  width:150px;
+  height:15px;
   text-align:center;
   border-style: solid;
   border-width:thick;
   border-color:black;
+  border-radius:10px;
+  font-family:'Press Start 2P';
+  font-size: 12px;
   color:white;
   margin: auto;
   padding:10px;
+  padding-top:15px;
 }
